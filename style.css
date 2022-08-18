@@ -6,6 +6,7 @@ html, body{
 }
 
 #dropdown{
+    z-index: -1;
     display: grid;
     grid-template-rows: auto;
     width: 200px;
@@ -25,4 +26,57 @@ html, body{
 
 #option1{
     display: grid;
+}
+
+#slider{
+    display: grid;
+    height: auto;
+    width: fit-content;
+    grid-template-rows: 5fr 1fr;
+}
+
+#currImage{
+    grid-row-start: 1;
+}
+
+#currImage img{
+    height: auto;
+    width: 500px;
+}
+
+#pictures{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr 2fr 2fr 1fr;
+    height: 50px;
+    width: 500px;
+    grid-row-start: 2;
+}
+
+#left{
+    grid-column-start: 1;
+    display: grid;
+    align-items: center;
+}
+
+#currPicture{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    height: 200px;
+    width: auto;
+}
+
+#currPicture img{
+    height: 200px;
+    width: auto;
+}
+
+#right{
+    grid-column-start: 8;
+    display: grid;
+    align-items: center;
+}
+
+.pic img{
+    height: 50px;
+    width: 75px;
 }

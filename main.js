@@ -24,4 +24,35 @@ entireMenu.addEventListener('mouseleave', ()=>{
     }
 })
 
+let pics = ["./images/pic1.jpg", "./images/pic2.jpg", "./images/pic3.jpg", "./images/pic4.jpg", "./images/pic5.jpg", "./images/pic6.jpg"];
+
+//let pictureElement = document.createElement('img');
+//pictureElement.setAttribute('src', pics[0]);
+//const picDiv = document.getElementById('currPicture');
+//picDiv.appendChild(pictureElement);
+
+let currPic = 0; 
+let currImage = document.getElementById('displayedImg');
+const left = document.getElementById('left');
+const right = document.getElementById('right');
+left.addEventListener('click', ()=>{
+    if(currPic == 0){
+        currPic = 5;
+        currImage.setAttribute('src', pics[currPic]);
+    } else {
+        currPic-=1;
+        currImage.setAttribute('src', pics[currPic]);
+    }
+})
+
+right.addEventListener('click', ()=>{
+    if(currPic == 5){
+        currPic = 0;
+        currImage.setAttribute('src', pics[currPic]);
+    } else {
+        currPic+=1;
+        currImage.setAttribute('src', pics[currPic]);
+    }
+})
+
 
