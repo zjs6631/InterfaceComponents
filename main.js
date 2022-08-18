@@ -31,10 +31,13 @@ let pics = ["./images/pic1.jpg", "./images/pic2.jpg", "./images/pic3.jpg", "./im
 //const picDiv = document.getElementById('currPicture');
 //picDiv.appendChild(pictureElement);
 
+//currPic watches index of pic being displayed
 let currPic = 0; 
+//grab the displayed img and the left right nav arrows
 let currImage = document.getElementById('displayedImg');
 const left = document.getElementById('left');
 const right = document.getElementById('right');
+//add logic for listeners to allow navigation through the pictures
 left.addEventListener('click', ()=>{
     if(currPic == 0){
         currPic = 5;
